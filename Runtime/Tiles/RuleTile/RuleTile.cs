@@ -398,6 +398,9 @@ namespace UnityEngine
             tileData.colliderType = m_DefaultColliderType;
             tileData.flags = TileFlags.LockTransform;
             tileData.transform = iden;
+            
+            // workaround for rule tile brush bug in current unity
+            tileData.color = Color.white;
 
             foreach (TilingRule rule in m_TilingRules)
             {
